@@ -198,7 +198,8 @@
 
     .founder { padding-block: 68px; background: linear-gradient(110deg, rgba(229,9,20,.07), transparent 38%), var(--surface); }
     .founder-layout { display: grid; grid-template-columns: minmax(300px, 460px) minmax(0, 1fr); gap: clamp(48px, 6vw, 92px); align-items: start; }
-    .founder-photo { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #111; aspect-ratio: 4 / 5; }
+    .founder-photo { position: relative; border: 1px solid rgba(229,9,20,.36); border-radius: 8px; overflow: hidden; background: #111; aspect-ratio: 4 / 5; box-shadow: 0 28px 70px rgba(0,0,0,.42), 0 0 48px rgba(229,9,20,.08); }
+    .founder-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.04); background: linear-gradient(180deg, transparent 72%, rgba(5,5,5,.14)); }
     .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
     .founder-copy { max-width: 700px; padding-top: 38px; }
     .founder-role { display: block; margin: 16px 0 22px; color: var(--red); font-weight: 800; text-transform: uppercase; font-size: 13px; }
@@ -421,7 +422,7 @@
 
     <section class="section founder" id="sobre" aria-labelledby="founder-title">
       <div class="container founder-layout">
-        <div class="founder-photo reveal"><img src="assets/rogerio-nobre.jpg" alt="Rogério Nobre, fundador da Nobre Marketing" loading="lazy" width="864" height="1152"></div>
+        <div class="founder-photo reveal"><img src="assets/rogerio-nobre-premium-v2.webp" alt="Rogério Nobre, fundador da Nobre Marketing" loading="lazy" width="1024" height="1536"></div>
         <div class="founder-copy reveal">
           <p class="eyebrow">Quem está por trás da Nobre</p>
           <h2 id="founder-title">Rogério Nobre</h2>
