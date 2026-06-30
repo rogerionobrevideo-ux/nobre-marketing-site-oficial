@@ -170,12 +170,15 @@
     .authority { padding-block: 82px; background: radial-gradient(circle at 12% 15%, rgba(229,9,20,.08), transparent 32%), var(--surface); }
     .section-head { display: flex; justify-content: space-between; align-items: end; gap: 34px; margin-bottom: 42px; }
     .section-head .lead { max-width: 500px; margin: 0; }
-    .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--line); }
-    .logo-item { min-height: 150px; display: grid; place-items: center; padding: 28px 36px; border-right: 1px solid var(--line); }
-    .logo-item:last-child { border-right: 0; }
-    .logo-item img { width: 190px; height: 78px; object-fit: contain; transition: transform .25s ease; }
-    .logo-item:hover img { transform: scale(1.04); }
-    .logo-item:nth-child(2) { background: #f4f4f4; }
+    .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .logo-item { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(145deg, #171717, #0c0c0c); transition: transform .25s ease, border-color .25s ease; }
+    .logo-item:hover { transform: translateY(-4px); border-color: rgba(229,9,20,.52); }
+    .logo-mark { min-height: 156px; display: grid; place-items: center; padding: 28px; background: #f5f5f5; }
+    .logo-mark img { width: 100%; max-width: 190px; height: 88px; object-fit: contain; transition: transform .25s ease; }
+    .logo-item:hover .logo-mark img { transform: scale(1.04); }
+    .logo-meta { padding: 20px 22px 22px; }
+    .logo-meta strong { display: block; margin-bottom: 5px; font-size: 16px; }
+    .logo-meta span { color: #aaa; font-size: 13px; }
 
     .flagship { overflow: hidden; background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #050505 100%); }
     .feature-layout { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 56px; }
@@ -298,10 +301,10 @@
       .proof-value { font-size: 27px; }
       .section-head { display: block; }
       .section-head .lead { margin-top: 18px; }
-      .logo-grid { grid-template-columns: repeat(3, 1fr); }
-      .logo-item { min-height: 105px; padding: 18px 10px; }
-      .logo-item img { width: 100%; max-width: 116px; height: 58px; }
-      .logo-item:last-child { border-bottom: 0; }
+      .logo-grid { grid-template-columns: 1fr; gap: 14px; }
+      .logo-mark { min-height: 132px; padding: 22px; }
+      .logo-mark img { max-width: 170px; height: 76px; }
+      .logo-meta { padding: 17px 19px 19px; }
       .feature-image, .feature-image img { min-height: 310px; }
       .format-list { grid-template-columns: 1fr; }
       .format-list li:nth-child(odd) { padding-right: 0; }
@@ -380,9 +383,9 @@
           <p class="lead">Experiência construída atendendo empresas de diferentes portes e segmentos em todo o Brasil.</p>
         </div>
         <div class="logo-grid reveal">
-          <div class="logo-item"><img src="assets/logo-marinha.webp" alt="Marinha do Brasil" loading="lazy" width="510" height="510"></div>
-          <div class="logo-item"><img src="assets/logo-samsung.webp" alt="Samsung" loading="lazy" width="752" height="300"></div>
-          <div class="logo-item"><img src="assets/logo-real-madrid.svg" alt="Real Madrid" loading="lazy"></div>
+          <article class="logo-item"><div class="logo-mark"><img src="assets/logo-marinha.webp" alt="Marinha do Brasil" loading="lazy" width="510" height="510"></div><div class="logo-meta"><strong>Marinha do Brasil</strong><span>Produção audiovisual institucional</span></div></article>
+          <article class="logo-item"><div class="logo-mark"><img src="assets/logo-samsung.webp" alt="Samsung" loading="lazy" width="752" height="300"></div><div class="logo-meta"><strong>Samsung</strong><span>Conteúdo para marca global</span></div></article>
+          <article class="logo-item"><div class="logo-mark"><img src="assets/logo-real-madrid.svg" alt="Real Madrid" loading="lazy"></div><div class="logo-meta"><strong>Real Madrid</strong><span>Comunicação esportiva internacional</span></div></article>
         </div>
       </div>
     </section>
