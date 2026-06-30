@@ -145,7 +145,11 @@
       padding: 150px 0 84px;
       position: relative;
       isolation: isolate;
-      background: #050505 url("assets/hero-rogerio-studio.webp") center 68px / cover no-repeat;
+      background-color: #050505;
+      background-image: url("assets/hero-rogerio-studio.webp");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: auto calc(100% - 68px);
     }
     .hero::before {
       content: "";
@@ -288,7 +292,7 @@
       .main-nav.open { opacity: 1; visibility: visible; pointer-events: auto; }
       .main-nav > a:not(.btn) { padding: 18px 4px; border-bottom: 1px solid var(--line); font-size: 15px; }
       .main-nav .btn { display: inline-flex; margin-top: 24px; }
-      .hero { min-height: 780px; align-items: flex-start; padding: 124px 0 54px; background-position: 60% top; }
+      .hero { min-height: 780px; align-items: flex-start; padding: 124px 0 54px; background-position: 60% top; background-size: cover; }
       .hero::before { background: linear-gradient(180deg, rgba(5,5,5,.35) 0%, rgba(5,5,5,.48) 38%, #050505 65%, #050505 100%); }
       .hero-copy { width: 100%; }
       .hero h1 { max-width: 350px; }
