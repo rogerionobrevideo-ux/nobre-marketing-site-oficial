@@ -160,12 +160,9 @@
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
     .hero-note { margin-top: 22px; color: #d1d1d1; font-size: 13px; font-weight: 600; }
 
-    .proof-strip { border-block: 1px solid var(--line); background: #090909; }
-    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-    .proof-item { min-height: 142px; padding: 28px; border-right: 1px solid var(--line); }
-    .proof-item:last-child { border-right: 0; }
-    .proof-value { display: block; color: var(--red); font-family: "Archivo Black", sans-serif; font-size: 32px; line-height: 1; }
-    .proof-label { display: block; margin-top: 10px; color: #ddd; font-size: 13px; font-weight: 700; }
+    .proof-strip { padding: 22px 0; border-block: 1px solid var(--line); background: #070707; }
+    .proof-art { display: block; overflow: hidden; border-radius: 8px; box-shadow: 0 24px 70px rgba(0,0,0,.38); }
+    .proof-art img { display: block; width: 100%; height: auto; }
 
     .authority { padding-block: 82px; background: radial-gradient(circle at 12% 15%, rgba(229,9,20,.08), transparent 32%), var(--surface); }
     .section-head { display: flex; justify-content: space-between; align-items: end; gap: 34px; margin-bottom: 42px; }
@@ -294,11 +291,7 @@
       .hero .lead { max-width: 370px; margin-top: 255px; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
       .hero-actions .btn { width: 100%; }
-      .proof-grid { grid-template-columns: 1fr 1fr; }
-      .proof-item { min-height: 126px; padding: 22px 16px; border-bottom: 1px solid var(--line); }
-      .proof-item:nth-child(2) { border-right: 0; }
-      .proof-item:nth-child(n+3) { border-bottom: 0; }
-      .proof-value { font-size: 27px; }
+      .proof-strip { padding: 16px 0; }
       .section-head { display: block; }
       .section-head .lead { margin-top: 18px; }
       .logo-grid { grid-template-columns: 1fr; gap: 14px; }
@@ -368,11 +361,11 @@
     </section>
 
     <section class="proof-strip" aria-label="Resultados da Nobre Marketing">
-      <div class="container proof-grid">
-        <div class="proof-item"><strong class="proof-value">30 mil+</strong><span class="proof-label">vídeos produzidos</span></div>
-        <div class="proof-item"><strong class="proof-value">30 mil+</strong><span class="proof-label">clientes atendidos</span></div>
-        <div class="proof-item"><strong class="proof-value">10+ anos</strong><span class="proof-label">de experiência</span></div>
-        <div class="proof-item"><strong class="proof-value">R$ 20 mi+</strong><span class="proof-label">gerenciados em anúncios</span></div>
+      <div class="container">
+        <picture class="proof-art">
+          <source media="(max-width: 720px)" srcset="assets/resultados-nobre-premium-mobile-v2.webp">
+          <img src="assets/resultados-nobre-premium-v2.webp" alt="30 mil vídeos produzidos, 30 mil clientes atendidos, mais de 10 anos de experiência e mais de 20 milhões de reais gerenciados em anúncios" loading="lazy" width="1800" height="520">
+        </picture>
       </div>
     </section>
 
