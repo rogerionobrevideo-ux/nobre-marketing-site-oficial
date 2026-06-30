@@ -161,6 +161,7 @@
     .hero-copy { width: 56%; }
     .hero h1 span { color: var(--red); }
     .hero .lead { max-width: 660px; color: #e0e0e0; }
+    .hero-mobile-visual { display: none; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
     .hero-note { margin-top: 22px; color: #d1d1d1; font-size: 13px; font-weight: 600; }
 
@@ -269,7 +270,7 @@
 
     @media (max-width: 720px) {
       .container { width: min(100% - 32px, var(--container)); }
-      .section { padding: 66px 0; }
+      .section { padding: 56px 0; }
       h1 { font-size: 40px; line-height: 1; }
       h2 { font-size: 32px; }
       .lead { font-size: 16px; }
@@ -294,13 +295,16 @@
       .main-nav.open { opacity: 1; visibility: visible; pointer-events: auto; }
       .main-nav > a:not(.btn) { padding: 18px 4px; border-bottom: 1px solid var(--line); font-size: 15px; }
       .main-nav .btn { display: inline-flex; margin-top: 24px; }
-      .hero { min-height: 780px; align-items: flex-start; padding: 124px 0 54px; background-position: 60% top; background-size: cover; }
-      .hero::before { background: linear-gradient(180deg, rgba(5,5,5,.35) 0%, rgba(5,5,5,.48) 38%, #050505 65%, #050505 100%); }
+      .hero { min-height: 0; align-items: flex-start; padding: 106px 0 48px; background-image: none; }
+      .hero::before { background: radial-gradient(circle at 80% 24%, rgba(229,9,20,.12), transparent 34%), linear-gradient(180deg, #050505, #080505 72%, #050505); }
       .hero-copy { width: 100%; }
-      .hero h1 { max-width: 350px; }
-      .hero .lead { max-width: 370px; margin-top: 255px; }
+      .hero .eyebrow { font-size: 11px; }
+      .hero h1 { max-width: 350px; font-size: 38px; line-height: .96; }
+      .hero-mobile-visual { display: block; width: calc(100% + 20px); height: 218px; margin: 22px -10px 16px; background: url("assets/hero-rogerio-studio.webp") center / contain no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%); }
+      .hero .lead { max-width: 370px; margin-top: 0; font-size: 16px; line-height: 1.58; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
       .hero-actions .btn { width: 100%; }
+      .hero-note { margin-top: 17px; }
       .proof-strip { padding: 16px 0; }
       .section-head { display: block; }
       .section-head .lead { margin-top: 18px; }
@@ -314,15 +318,17 @@
       .solution-showcase { gap: 30px; }
       .solution-visual { min-height: 330px; }
       .solution-item { grid-template-columns: 42px 1fr; padding: 21px 0; }
-      .founder { padding-block: 48px; }
-      .founder-layout { gap: 30px; padding: 18px; }
+      .founder { padding-block: 42px; }
+      .founder-layout { gap: 24px; padding: 16px; }
       .founder-photo { width: min(100%, 360px); max-height: 450px; margin-inline: auto; }
       .founder-copy h2 { font-size: 38px; }
       .founder-copy p { font-size: 17px; }
-      .method-visual { height: 280px; margin-bottom: 14px; }
+      .method-visual { height: 240px; margin-bottom: 12px; }
       .method-visual img { object-position: 52% center; }
       .method-grid { grid-template-columns: 1fr; }
-      .method-step { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+      .method-step { min-height: auto; padding: 28px 22px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .method-number { font-size: 40px; }
+      .method-step h3 { margin-top: 20px; }
       .method-step:last-child { border-bottom: 0; }
       .final-cta { min-height: 650px; align-items: flex-end; background-position: 69% top; padding-bottom: 72px; }
       .final-cta::before { background: linear-gradient(180deg, rgba(5,5,5,.24) 0%, rgba(5,5,5,.6) 47%, #050505 74%, #050505 100%); }
@@ -363,6 +369,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">Marketing e produção audiovisual</p>
           <h1>Estratégia que transforma <span>atenção em vendas</span></h1>
+          <div class="hero-mobile-visual" aria-hidden="true"></div>
           <p class="lead">Produzimos vídeos comerciais e conectamos sua marca a tráfego pago, sites, automações e presença digital para gerar crescimento de verdade.</p>
           <div class="hero-actions">
             <a class="btn btn-whatsapp" href="https://wa.me/5535999051050?text=Olá!%20Vim%20pelo%20site%20da%20Nobre%20Marketing%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">
