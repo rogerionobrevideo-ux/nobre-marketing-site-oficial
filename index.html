@@ -196,10 +196,11 @@
     .solution-item h3 { margin: 0 0 7px; }
     .solution-item p { margin: 0; color: #bdbdbd; }
 
-    .founder { padding-block: 82px; background: linear-gradient(110deg, rgba(229,9,20,.07), transparent 38%), var(--surface); }
-    .founder-layout { display: grid; grid-template-columns: minmax(300px, .72fr) 1.28fr; gap: 64px; align-items: center; }
-    .founder-photo { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #111; }
-    .founder-photo img { width: 100%; height: clamp(420px, 46vw, 570px); object-fit: cover; object-position: center 18%; }
+    .founder { padding-block: 68px; background: linear-gradient(110deg, rgba(229,9,20,.07), transparent 38%), var(--surface); }
+    .founder-layout { display: grid; grid-template-columns: minmax(300px, 460px) minmax(0, 1fr); gap: clamp(48px, 6vw, 92px); align-items: start; }
+    .founder-photo { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #111; aspect-ratio: 4 / 5; }
+    .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+    .founder-copy { max-width: 700px; padding-top: 38px; }
     .founder-role { display: block; margin: 16px 0 22px; color: var(--red); font-weight: 800; text-transform: uppercase; font-size: 13px; }
     .founder-copy p { color: #ccc; font-size: 17px; }
     .founder-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
@@ -251,6 +252,8 @@
       .feature-image, .feature-image img { min-height: 450px; }
       .footer-main { grid-template-columns: 1fr 1fr; }
       .footer-brand { grid-column: 1 / -1; }
+      .founder-photo { width: min(100%, 520px); }
+      .founder-copy { padding-top: 0; }
     }
 
     @media (max-width: 720px) {
@@ -305,7 +308,7 @@
       .solution-visual { min-height: 330px; }
       .solution-item { grid-template-columns: 42px 1fr; padding: 21px 0; }
       .founder-layout { gap: 34px; }
-      .founder-photo img { height: 460px; }
+      .founder-photo { width: 100%; max-height: 500px; }
       .method-grid { grid-template-columns: 1fr; }
       .method-step { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
       .method-step:last-child { border-bottom: 0; }
